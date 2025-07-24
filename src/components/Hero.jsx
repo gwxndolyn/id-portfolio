@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Aurora Background */}
       <div className="absolute inset-0">
         <Aurora
-          colorStops={["#3A29FF", "#FFFFFF", "#3A29FF"]}
+          colorStops={["#302191", "#D9D5FF", "#302191"]}
           blend={0.5}
           amplitude={1.0}
           speed={0.5}
@@ -20,6 +20,7 @@ const Hero = () => {
           Warren Yap
         </h1>
       </div>
+
     </section>
   );
 };
