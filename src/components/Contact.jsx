@@ -41,7 +41,7 @@ const Contact = () => {
   ];
 
   return (
-    <footer className="bg-black py-12 border-white/10">
+    <footer className="bg-transparent py-12 border-white/10">
       <div className="max-w-6xl mx-auto px-6">
         {/* Social Icons */}
         <div className="flex justify-center space-x-2 mb-8">

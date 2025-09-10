@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const Experiences = () => {
   const experiences = [
     {
-      title: 'Software Engineer Intern',
-      company: 'Tech Company',
+      title: 'Tutor',
+      company: 'Private Tutor',
       period: '2024',
       description: 'Developed web applications using React and Node.js'
     },

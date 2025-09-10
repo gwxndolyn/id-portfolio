@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const experiences = [
     {
-      title: 'Bachelor of Computer Science',
-      organization: 'Singapore Management University',
-      period: '2022 - 2026',
+      title: 'Singapore Management University',
+      organization: 'Bachelor of Science, Information Systems',
+      period: '2024 - 2028',
       type: 'education',
-      description: 'Pursuing a comprehensive computer science degree with focus on software engineering, data structures, algorithms, and modern web technologies.',
+      description: '',
       highlights: ['Dean\'s List', 'Software Engineering Track', 'Data Science Minor']
     },
     {
@@ -28,12 +28,12 @@ const Projects = () => {
       highlights: ['Process Analysis', 'Data Visualization', 'Client Presentations']
     },
     {
-      title: 'High School Diploma',
-      organization: 'International School',
+      title: 'Anglo Chinese Junior College',
+      organization: 'A-Levels',
       period: '2018 - 2020',
       type: 'education',
-      description: 'Graduated with honors, specializing in Mathematics and Computer Science. Active participant in programming competitions and tech clubs.',
-      highlights: ['Valedictorian', 'Programming Club President', 'Math Olympiad']
+      description: '',
+      highlights: []
     },
     {
       title: 'Full-Stack Developer',
@@ -64,7 +64,7 @@ const Projects = () => {
     });
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -73,7 +73,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 mt-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 mt-6">
             My Experiences
           </h2>
 

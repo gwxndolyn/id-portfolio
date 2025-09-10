@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white py-20 flex items-center">
+    <section className="min-h-screen bg-transparent text-white py-20 flex items-center">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-5xl font-bold text-center mb-16">About Me</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">About Me</h2>
         
         <div className="space-y-8 text-center">
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
