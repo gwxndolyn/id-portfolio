@@ -45,19 +45,16 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white py-20 relative overflow-hidden flex items-center">
+    <section className="bg-transparent text-white py-20 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2 className="text-5xl font-bold mb-8">Skills & Technologies</h2>
-        <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-          
-        </p>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">Skills & Technologies</h2>
         
         {/* Static skills grid for reference */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
           {skills.map((skill, index) => (
             <div
               key={skill}
-              className="group relative p-4 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden animate-float"
+              className="group relative p-4 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden animate-float"
               style={{ 
                 animationDelay: `${index * 100}ms`,
                 animationDuration: `${3 + (index % 3)}s`

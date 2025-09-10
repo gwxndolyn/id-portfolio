@@ -4,9 +4,9 @@ import RoleTypewriter from './RoleTypewriter.jsx';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-transparent text-white relative overflow-hidden">
       {/* Aurora Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-10">
         <Aurora
           colorStops={["#3A29FF", "#FFFFFF", "#3A29FF"]}
           blend={0.5}
@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       {/* Glass Font Name */}
-      <div className="relative z-10 text-center">
+      <div className="relative z-20 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white/30 via-white/50 to-white/30 bg-clip-text text-transparent drop-shadow-2xl mb-4">
           Warren Yap
         </h1>
