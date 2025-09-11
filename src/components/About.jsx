@@ -34,8 +34,8 @@ const About = () => {
     };
   }, [startDecryption]);
   return (
-    <section ref={sectionRef} className="min-h-screen bg-transparent text-white py-20 flex items-center">
-      <div className="max-w-7xl mx-auto px-6 w-full">
+    <section ref={sectionRef} className="min-h-screen bg-transparent text-white py-20 flex items-center overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
         
         
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-6xl mx-auto">
@@ -48,21 +48,43 @@ const About = () => {
             viewport={{ margin: "-100px" }}
           >
             <div className="relative">
-              <TiltedCard
-                imageSrc="/assets/img.jpg"
-                altText="Warren Yap"
-                captionText=""
-                containerHeight="420px"
-                containerWidth="356px"
-                imageHeight="420px"
-                imageWidth="356px"
-                rotateAmplitude={28}
-                scaleOnHover={1.1}
-                showMobileWarning={false}
-                showTooltip={false}
-                displayOverlayContent={false}
-                style={{ borderRadius: '1rem' }}
-              />
+              {/* Mobile Image */}
+              <div className="block md:hidden">
+                <TiltedCard
+                  imageSrc="/assets/img.jpg"
+                  altText="Warren Yap"
+                  captionText=""
+                  containerHeight="300px"
+                  containerWidth="240px"
+                  imageHeight="300px"
+                  imageWidth="240px"
+                  rotateAmplitude={28}
+                  scaleOnHover={1.1}
+                  showMobileWarning={false}
+                  showTooltip={false}
+                  displayOverlayContent={false}
+                  style={{ borderRadius: '1rem' }}
+                />
+              </div>
+              
+              {/* Desktop Image */}
+              <div className="hidden md:block">
+                <TiltedCard
+                  imageSrc="/assets/img.jpg"
+                  altText="Warren Yap"
+                  captionText=""
+                  containerHeight="420px"
+                  containerWidth="356px"
+                  imageHeight="420px"
+                  imageWidth="356px"
+                  rotateAmplitude={28}
+                  scaleOnHover={1.1}
+                  showMobileWarning={false}
+                  showTooltip={false}
+                  displayOverlayContent={false}
+                  style={{ borderRadius: '1rem' }}
+                />
+              </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500/30 rounded-full blur-sm"></div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500/30 rounded-full blur-sm"></div>
@@ -71,7 +93,7 @@ const About = () => {
               <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 md:translate-x-1/3 md:translate-y-1/2 z-30">
                 <div className="flex flex-col items-center">
                   <Folder
-                    size={0.7}
+                    size={0.6}
                     color="#3FA1DE"
                     className="custom-folder"
                     items={[
@@ -106,9 +128,9 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ margin: "-100px" }}
           >
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-10 text-center md:text-left">About Me</h2>
+          <h2 className="text-xl md:text-3xl font-bold mb-6 md:mb-10 text-center md:text-left">About Me</h2>
             <ScrambledText
-              className="text-lg text-gray-300 leading-relaxed !m-0 mb-6"
+              className="text-base md:text-lg text-gray-300 leading-relaxed !m-0 mb-6"
               radius={90}
               duration={1}
               speed={0.8}
@@ -119,7 +141,7 @@ const About = () => {
             </ScrambledText>
             <br />
             <ScrambledText
-              className="text-lg text-gray-300 leading-relaxed !m-0 mb-6"
+              className="text-base md:text-lg text-gray-300 leading-relaxed !m-0 mb-6"
               radius={90}
               duration={1}
               speed={0.8}

@@ -4,7 +4,7 @@ import RoleTypewriter from './RoleTypewriter.jsx';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-transparent text-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-transparent text-white relative overflow-hidden pt-16 md:pt-0">
       {/* Aurora Background */}
       <div className="absolute inset-0 z-10">
         <Aurora
