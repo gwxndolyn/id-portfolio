@@ -76,8 +76,7 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 50, scale: 0.8 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1,
+                  duration: 0.6,
                   ease: "easeOut"
                 }}
                 viewport={{ margin: "-50px" }}

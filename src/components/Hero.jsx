@@ -4,7 +4,7 @@ import RoleTypewriter from './RoleTypewriter.jsx';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-transparent text-white relative overflow-hidden pt-16 md:pt-0">
+    <section className="min-h-screen flex items-center justify-center bg-transparent text-white relative overflow-hidden -mt-16 md:mt-0">
       {/* Aurora Background */}
       <div className="absolute inset-0 z-10">
         <Aurora
@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Arrow */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-16 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <button
           onClick={() => {
             const aboutSection = document.getElementById('about');
