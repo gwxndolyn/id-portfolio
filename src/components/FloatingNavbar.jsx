@@ -8,7 +8,7 @@ const FloatingNavbar = () => {
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'About', href: '#about', id: 'about' },
     { label: 'Skills', href: '#skills', id: 'skills' },
-    { label: 'Experiences', href: '#projects', id: 'projects' },
+    { label: 'Experiences', href: '#experiences', id: 'experiences' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -42,10 +42,18 @@ const FloatingNavbar = () => {
   const handleNavClick = (href, id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+      if (id === 'skills') {
+        const offsetTop = element.offsetTop - 120;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      } else {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   };
 

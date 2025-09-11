@@ -34,7 +34,22 @@
   .glass-effect {
     @apply backdrop-blur-sm bg-white/5 border border-white/10;
   }
-} 
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .lanyard-wrapper {
     position: relative;
