@@ -3,7 +3,7 @@ import FloatingNavbar from './components/FloatingNavbar.jsx';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
 import Skills from './components/Skills.jsx';
-import Projects from './components/Projects.jsx';
+import Experiences from './components/Experiences.jsx';
 import Contact from './components/Contact.jsx';
 
 function App() {
@@ -22,8 +22,8 @@ function App() {
       <section id="skills" className="relative z-10">
         <Skills />
       </section>
-      <section id="projects" className="relative z-10">
-        <Projects />
+      <section id="experiences" className="relative z-10">
+        <Experiences />
       </section>
       <section id="contact" className="relative z-10">
         <Contact />
