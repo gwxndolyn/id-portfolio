@@ -41,10 +41,10 @@ const Contact = () => {
   ];
 
   return (
-    <footer className="bg-transparent py-12 border-white/10">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer className="bg-transparent py-8 md:py-12 border-white/10">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* Social Icons */}
-        <div className="flex justify-center space-x-2 mb-8">
+        <div className="flex justify-center space-x-2 sm:space-x-4 mb-6 md:mb-8">
           {socials.map((social) => (
             <a
               key={social.name}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import ScrambledText from './ScrambledText.jsx';
 import TiltedCard from './TiltedCard';
 import Folder from './Folder.jsx';
@@ -37,18 +38,24 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-6 w-full">
         
         
-        <div className="grid md:grid-cols-2 gap-8 items-center w-full max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-6xl mx-auto">
           {/* Image Column */}
-          <div className="flex justify-center">
+          <motion.div 
+            className="flex justify-center order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ margin: "-100px" }}
+          >
             <div className="relative">
               <TiltedCard
                 imageSrc="/assets/img.jpg"
                 altText="Warren Yap"
                 captionText=""
-                containerHeight="480px"
-                containerWidth="384px"
-                imageHeight="480px"
-                imageWidth="384px"
+                containerHeight="420px"
+                containerWidth="356px"
+                imageHeight="420px"
+                imageWidth="356px"
                 rotateAmplitude={28}
                 scaleOnHover={1.1}
                 showMobileWarning={false}
@@ -61,10 +68,10 @@ const About = () => {
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500/30 rounded-full blur-sm"></div>
               
               {/* Resume Folder */}
-              <div className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/2 z-30">
+              <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 md:translate-x-1/3 md:translate-y-1/2 z-30">
                 <div className="flex flex-col items-center">
                   <Folder
-                    size={0.8}
+                    size={0.7}
                     color="#3FA1DE"
                     className="custom-folder"
                     items={[
@@ -89,11 +96,17 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           
           {/* Text Column */}
-          <div className="w-full">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10">About Me</h2>
+          <motion.div 
+            className="w-full order-1 md:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ margin: "-100px" }}
+          >
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-10 text-center md:text-left">About Me</h2>
             <ScrambledText
               className="text-lg text-gray-300 leading-relaxed !m-0 mb-6"
               radius={90}
@@ -101,9 +114,10 @@ const About = () => {
               speed={0.8}
               scrambleChars="!@#$%^&*()_+-=[]{}|;:,.<>?"
             >
-              I'm a passionate full-stack developer with a love for creating digital experiences that make a real impact. With expertise in modern web technologies and a keen eye for design, I bridge the gap between functionality and aesthetics.
+              Hi, I’m Warren Yap, an Information Systems student at Singapore Management University. I’m passionate about technology and enjoy building web apps that bring ideas to life. I’ve been working with tools like JavaScript, React, and Python, and I love experimenting with new frameworks to sharpen my skills.
+              When I’m not coding, you’ll probably find me playing squash or climbing
             </ScrambledText>
-            
+            <br />
             <ScrambledText
               className="text-lg text-gray-300 leading-relaxed !m-0 mb-6"
               radius={90}
@@ -111,9 +125,9 @@ const About = () => {
               speed={0.8}
               scrambleChars="!@#$%^&*()_+-=[]{}|;:,.<>?"
             >
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community. I believe in continuous learning and pushing the boundaries of what's possible.
+              When I'm not coding, you'll probably find me playing squash or climbing!
             </ScrambledText>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

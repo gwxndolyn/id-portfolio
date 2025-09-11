@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skills = [
@@ -45,32 +46,48 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="bg-transparent text-white py-20 relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2 className="text-2xl md:text-3xl font-bold  mb-20">Skills & Technologies</h2>
+    <section className="bg-transparent text-white py-16 md:py-20 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
+        <motion.h2 
+          className="text-2xl md:text-3xl font-bold mb-12 md:mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ margin: "-100px" }}
+        >
+          Skills & Technologies
+        </motion.h2>
         
         {/* Natural alternating skills layout */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 max-w-5xl mx-auto">
           {skills.map((skill, index) => {
             // Create natural spacing variations
             const marginTop = [0, 8, 16, 24, 12, 4][index % 6]; // Varying top margins for natural flow
             
             return (
-              <div
+              <motion.div
                 key={skill}
-                className="group relative px-4 py-3 h-12 flex items-center justify-center bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden animate-float"
+                className="group relative px-3 sm:px-4 py-2 sm:py-3 h-10 sm:h-12 flex items-center justify-center bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl hover:border-white/30 transition-all duration-500 hover:scale-110 hover:-translate-y-2 cursor-pointer overflow-hidden animate-float"
                 style={{ 
                   marginTop: `${marginTop}px`,
                   animationDelay: `${index * 150}ms`,
                   animationDuration: `${3 + (index % 4)}s`
                 }}
+                initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ margin: "-50px" }}
               >
                 {/* Glowing background effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                 
                 {/* Animated border glow */}
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 p-[1px]">
-                  <div className="w-full h-full bg-gray-900/80 rounded-xl"></div>
+                <div className="absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 p-[1px]">
+                  <div className="w-full h-full bg-gray-900/80 rounded-lg sm:rounded-xl"></div>
                 </div>
                 
                 {/* Sparkle effects */}
@@ -78,13 +95,13 @@ const Skills = () => {
                 <div className="absolute bottom-1 left-1 w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300 delay-100"></div>
                 
                 {/* Content */}
-                <span className="relative z-10 text-sm font-medium text-white/80 group-hover:text-white group-hover:font-semibold transition-all duration-300 group-hover:drop-shadow-lg whitespace-nowrap">
+                <span className="relative z-10 text-xs sm:text-sm font-medium text-white/80 group-hover:text-white group-hover:font-semibold transition-all duration-300 group-hover:drop-shadow-lg whitespace-nowrap">
                   {skill}
                 </span>
                 
                 {/* Hover ripple effect */}
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-30 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-              </div>
+                <div className="absolute inset-0 rounded-lg sm:rounded-xl opacity-0 group-hover:opacity-30 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+              </motion.div>
             );
           })}
         </div>

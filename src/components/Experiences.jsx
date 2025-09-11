@@ -56,14 +56,14 @@ const Experiences = () => {
     });
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 mt-6">
             My Experiences
@@ -71,7 +71,7 @@ const Experiences = () => {
 
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           {/* Work Experience Section */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -79,13 +79,13 @@ const Experiences = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center mb-8">
+            <div className="flex items-center mb-6 md:mb-8">
               <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
                 <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
                 </svg>
               </div>
-              <h3 className="text-2xl font-medium text-white">Work Experience</h3>
+              <h3 className="text-xl md:text-2xl font-medium text-white">Work Experience</h3>
             </div>
             
             <div className="relative">
@@ -102,11 +102,11 @@ const Experiences = () => {
                 >
                   <div className="absolute left-0 top-2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2"></div>
                   
-                  <div className="flex items-start justify-between mb-1">
-                    <h4 className="text-lg font-medium text-white leading-tight">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-1">
+                    <h4 className="text-base md:text-lg font-medium text-white leading-tight">
                       {experience.title}
                     </h4>
-                    <span className="text-xs text-white/50 ml-3 flex-shrink-0">
+                    <span className="text-xs text-white/50 sm:ml-3 flex-shrink-0 mt-1 sm:mt-0">
                       {experience.period}
                     </span>
                   </div>
@@ -130,13 +130,13 @@ const Experiences = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center mb-8">
+            <div className="flex items-center mb-6 md:mb-8">
               <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center mr-3">
                 <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V15h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
                 </svg>
               </div>
-              <h3 className="text-2xl font-medium text-white">Education</h3>
+              <h3 className="text-xl md:text-2xl font-medium text-white">Education</h3>
             </div>
             
             <div className="relative">
@@ -153,11 +153,11 @@ const Experiences = () => {
                 >
                   <div className="absolute left-0 top-2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2"></div>
                   
-                  <div className="flex items-start justify-between mb-1">
-                    <h4 className="text-lg font-medium text-white leading-tight">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-1">
+                    <h4 className="text-base md:text-lg font-medium text-white leading-tight">
                       {experience.title}
                     </h4>
-                    <span className="text-xs text-white/50 ml-3 flex-shrink-0">
+                    <span className="text-xs text-white/50 sm:ml-3 flex-shrink-0 mt-1 sm:mt-0">
                       {experience.period}
                     </span>
                   </div>

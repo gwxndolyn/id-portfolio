@@ -34,6 +34,22 @@
   .glass-effect {
     @apply backdrop-blur-sm bg-white/5 border border-white/10;
   }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .mobile-touch-friendly {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .mobile-text-size {
+      font-size: 16px;
+    }
+    
+    .mobile-padding {
+      padding: 1rem;
+    }
+  }
 }
 
 @layer utilities {
