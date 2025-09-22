@@ -137,7 +137,7 @@ const About = () => {
               scrambleChars="!@#$%^&*()_+-=[]{}|;:,.<>?"
             >
               Hi, I’m Warren Yap, an Information Systems student at Singapore Management University. I’m passionate about technology and enjoy building web apps that bring ideas to life. I’ve been working with tools like JavaScript, React, and Python, and I love experimenting with new frameworks to sharpen my skills.
-              When I’m not coding, you’ll probably find me playing squash or climbing
+              
             </ScrambledText>
             <br />
             <ScrambledText
